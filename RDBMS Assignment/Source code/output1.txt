@@ -1,0 +1,39 @@
+┌────────────┬────────────┬─────────────┬────────────┬────────────┬──────────┬─────────────┬─────────────┬────────────┬────────────┬─────────────────┐
+│ CHINHANH   │ NGANH      │ GIANGVIEN   │ LOP        │ SINHVIEN   │ MONHOC   │ KETQUA      │ KHOAHOC     │ NHANVIEN   │ KETOAN     │ NHANVIENTUVAN   │
+├────────────┼────────────┼─────────────┼────────────┼────────────┼──────────┼─────────────┼─────────────┼────────────┼────────────┼─────────────────┤
+│ MACN-PK    │ MANGANH-PK │ MAGV-PK     │ MALOP-PK   │ MASV-PK    │ MAMON-PK │ MASV-PK-FK  │ MAMON-PK-FK │ MANV-PK    │ MANV-PK-FK │ MANV-PK-FK      │
+│ DIACHI     │ TENNGANH   │ HOTEN       │ TENLOP     │ HOTEN      │ TENMON   │ MAMON-PK-FK │ MAKH-PK     │ HOTEN      │ HOTEN      │ HOTEN           │
+│ DIENTICH   │            │ EMAIL       │ SOLUONGSV  │ NGAYSINH   │ SOTIET   │ DIEMSO      │ TKB         │ SDT        │ SDT        │ SDT             │
+│            │            │ HOCVI       │ MACN-FK    │ GIOITINH   │          │             │ MAGV-FK     │ MACN-FK    │ MACN-FK    │ MACN-FK         │
+│            │            │             │ MANGANH-FK │ QUEQUAN    │          │             │             │            │ BANGCAP    │ GPA             │
+│            │            │             │ MAGV-FK    │ MALOP-FK   │          │             │             │            │ CHUNGCHITH │ KINHNGHIEM      │
+└────────────┴────────────┴─────────────┴────────────┴────────────┴──────────┴─────────────┴─────────────┴────────────┴────────────┴─────────────────┘
+
+┌───────────┬────────────────┬───────────────┐
+│ TABLE     │ RELATIONSHIP   │ TABLE         │
+├───────────┼────────────────┼───────────────┤
+│ CHINHANH  │ 1-N            │ LOP           │
+├───────────┼────────────────┼───────────────┤
+│ CHINHANH  │ 1-N            │ NHANVIEN      │
+├───────────┼────────────────┼───────────────┤
+│ LOP       │ 1-N            │ SINHVIEN      │
+├───────────┼────────────────┼───────────────┤
+│ NGANH     │ 1-N            │ LOP           │
+├───────────┼────────────────┼───────────────┤
+│ GIANGVIEN │ 1-N            │ KHOAHOC       │
+├───────────┼────────────────┼───────────────┤
+│ SINHVIEN  │ N-N            │ MONHOC        │
+├───────────┼────────────────┼───────────────┤
+│ SINHVIEN  │ 1-N            │ KETQUA        │
+├───────────┼────────────────┼───────────────┤
+│ MONHOC    │ 1-N            │ KETQUA        │
+├───────────┼────────────────┼───────────────┤
+│ NHANVIEN  │ 1-1            │ KETOAN        │
+├───────────┼────────────────┼───────────────┤
+│ NHANVIEN  │ 1-1            │ NHANVIENTUVAN │
+├───────────┼────────────────┼───────────────┤
+│ LOP       │ 1-1            │ GIANGVIEN     │
+├───────────┼────────────────┼───────────────┤
+│ MONHOC    │ 1-N            │ KHOAHOC       │
+└───────────┴────────────────┴───────────────┘
+
